@@ -16,6 +16,5 @@ class Event(Base):
     end_time = Column(DateTime)
     contact = Column(Unicode(140))
 
-    @property
     def __repr__(self):
         return '<Event %r>' % (self.name)
