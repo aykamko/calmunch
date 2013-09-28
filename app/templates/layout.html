@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="{{ url_for('static', filename='css/flatlyTheme.css') }}" rel="stylesheet">
+		<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+		<link href="{{ url_for('static', filename='css/calmunch.css') }}" rel="stylesheet">
+	</head>
+    <body>
+		<div class="navbar navbar-default navbar-fixed-top">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <a href="../" class="navbar-brand">Cal Munch</a>
+	          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	        </div>
+	        <div class="navbar-collapse collapse" id="navbar-main">
+	          <ul class="nav navbar-nav">
+	            <li>
+	              <a href="../about_us/">About Us</a>
+	            </li>
+	            <li>
+	              <a href="../free_food/">Free Food</a>
+	            </li>
+	          </ul>
+
+	          <ul class="nav navbar-nav navbar-right">
+	            <li><a href="#" target="_blank">Sign in</a></li>
+	            <li><a href="#" target="_blank">Sign up</a></li>
+	          </ul>
+
+	        </div>
+	      </div>
+	    </div>
+
+	    {% for message in get_flashed_messages() %}
+			<div class=flash>{{ message }}</div>
+		{% endfor %}
+
+	    {% block body %}{% endblock %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    </body>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</html>
