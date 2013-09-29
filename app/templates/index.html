@@ -30,7 +30,7 @@
 			    <div class="bs-example">
 		      	<button type="button" class="btn btn-success btn-lg btn-block">
 		      		Location: {{event.location}}<br>
-		      		Date: {{event.start_time}} - {{event.end_time}}
+		      		Date: <span id="start_time">{{event.start_time}}</span> - <span id="end_time">{{event.end_time}}</span>
 		      	</button>
 			      <div class="google" id="{{event.name}}"></div>
 			      <script>
@@ -74,4 +74,7 @@
 			  </div>
 			</div>
       {% endfor %}
+      <script>
+      	$("#start_time").text()
+      </script>
 {% endblock %}
