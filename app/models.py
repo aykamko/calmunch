@@ -1,5 +1,5 @@
 from sqlalchemy import Column, SmallInteger, Integer, String,\
-        LargeBinary, DateTime, ForeignKey, Unicode
+        LargeBinary, DateTime, ForeignKey, Unicode, Float
 from sqlalchemy.orm import relationship
 from app.database import Base
 
@@ -10,6 +10,8 @@ class Event(Base):
     blurb = Column(Unicode(140))
     location = Column(Unicode(140))
     sponsor = Column(Unicode(140))
+    latitude = Column(Float)
+    longitude = Column(Float)
     description = Column(Unicode(5000))
     food = Column(Unicode(280))
     start_time = Column(DateTime)
