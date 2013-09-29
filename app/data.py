@@ -1,4 +1,5 @@
 from datetime import datetime
+from app.models import Event
 
 event1 = Event()
 event1.name = "HackJam"
