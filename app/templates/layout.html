@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>CalMunch</title>
         <link href="{{ url_for('static', filename='css/flatlyTheme.css') }}" rel="stylesheet">
         <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ url_for('static', filename='css/calmunch.css') }}" rel="stylesheet">
@@ -19,12 +20,8 @@
             <nav class="navbar-collapse collapse" id="navbar-main" role="navigation">
               <ul class="nav navbar-nav">
                 <li>
-                  <a href="../about_us/">About Us</a>
+                  <a href="../about_us">About Us</a>
                 </li>
-              </ul>
-
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{url_for('create_event')}}">Create Event</a></li>
               </ul>
             </nav>
           </div>
