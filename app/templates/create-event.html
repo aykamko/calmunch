@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<br>
+<div class="container">
+    <form method="POST" action="/create-event">
+        {{ form.hidden_tag() }}
+        {% for field in form %}
+        {% if field.name != 'csrf_token' %}
+            <div class="input-group">
+                <span class="input-group-addon">{{ field.label }}{% if field.flags.required %}*{% endif %}</span>
+                <input id="{{ field.name }}" name="{{ field.name }}" type="text" class="form-control">
+            </div>
+            <br>
+        {% endif %}
+        {% endfor %}
+        <div class="pager">
+            <input class="btn btn-success" type="submit" value="Create">
+        </div>
+    </form>
+</div class="container">
+
+{% endblock %}

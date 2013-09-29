@@ -11,4 +11,16 @@ def index():
 
 @app.route('/about_us')
 def about_us():
-    return render_template('about_us.html');
+    return render_template('about_us.html')
+
+@app.route('/create-event', methods=('GET', 'POST'))
+def create_event():
+	from app.forms import CreateEventForm
+	form = CreateEventForm(request.form)
+	if request.method == 'POST' and form.validate():
+		if not form.validate():
+			print form.errors
+		return redirect('/')
+	if len(form.errors.keys()) != 0:
+	    flash("Please fill the following fields with valid information: " + ', '.join([field.capitalize() for field in form.errors.keys()]))
+	return render_template('create-event.html', form = form)
