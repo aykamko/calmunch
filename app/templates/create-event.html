@@ -5,15 +5,43 @@
 <div class="container">
     <form method="POST" action="/create-event">
         {{ form.hidden_tag() }}
-        {% for field in form %}
-        {% if field.name != 'csrf_token' %}
-            <div class="input-group">
-                <span class="input-group-addon">{{ field.label }}{% if field.flags.required %}*{% endif %}</span>
-                <input id="{{ field.name }}" name="{{ field.name }}" type="text" class="form-control">
-            </div>
-            <br>
-        {% endif %}
-        {% endfor %}
+
+        <div class="input-group">
+            <span class="input-group-addon">{{ form.name.label }}{% if form.name.flags.required %}*{% endif %}</span>
+            <input id="{{ form.name.id }}" name="{{ form.name.name }}" type="text" class="form-control">
+        </div>
+        <br>
+
+        <div class="input-group">
+            <span class="input-group-addon">{{ form.location.label }}{% if form.location.flags.required %}*{% endif %}</span>
+            <input id="{{ form.location.id }}" name="{{ form.location.name }}" type="text" class="form-control">
+        </div>
+        <br>
+
+        <div class="input-group">
+            <span class="input-group-addon">{{ form.description.label }}{% if form.description.flags.required %}*{% endif %}</span>
+            <input id="{{ form.description.id }}" name="{{ form.description.name }}" type="text" class="form-control">
+        </div>
+        <br>
+
+        <div class="input-group">
+            <span class="input-group-addon">{{ form.sponsor.label }}{% if form.sponsor.flags.required %}*{% endif %}</span>
+            <input id="{{ form.sponsor.id }}" name="{{ form.sponsor.name }}" type="text" class="form-control">
+        </div>
+        <br>
+
+        <div class="input-group">
+            <span class="input-group-addon">{{ form.food.label }}{% if form.food.flags.required %}*{% endif %}</span>
+            <input id="{{ form.food.id }}" name="{{ form.food.name }}" type="text" class="form-control">
+        </div>
+        <br>
+
+        <div class="input-group">
+            <span class="input-group-addon">{{ form.contact.label }}{% if form.contact.flags.required %}*{% endif %}</span>
+            <input id="{{ form.contact.id }}" name="{{ form.contact.name }}" type="text" class="form-control">
+        </div>
+        <br>
+
         <div class="pager">
             <input class="btn btn-success" type="submit" value="Create">
         </div>

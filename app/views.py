@@ -18,8 +18,6 @@ def create_event():
 	from app.forms import CreateEventForm
 	form = CreateEventForm(request.form)
 	if request.method == 'POST' and form.validate():
-		if not form.validate():
-			print form.errors
 		return redirect('/')
 	if len(form.errors.keys()) != 0:
 	    flash("Please fill the following fields with valid information: " + ', '.join([field.capitalize() for field in form.errors.keys()]))
