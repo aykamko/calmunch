@@ -57,7 +57,7 @@ event5.longitude = -122.2587323
 event5.description = "Please join us for food and refreshments, and learn more about the exciting career opportunities at National Instruments!"
 event5.food = "Food and Refreshments"
 event5.start_time = datetime.datetime(2013, 10, 3, 18, 00)
-event5.end_time = datetime.dteatime(2013, 10, 3, 19, 00)
+event5.end_time = datetime.datetime(2013, 10, 3, 19, 00)
 
 event6 = Event()
 event6.name = "Undergrad Social Hour"
@@ -68,6 +68,17 @@ event6.longitude = -122.257581
 event6.description = "UG Social Hour 10/08 with Special Guest Speaker Professor Jan Rabaey."
 event6.food = "Food and Refreshments"
 event6.start_time = datetime.datetime(2013, 10, 8, 15, 30)
-event6.end_time = datetime.dteatime(2013, 10, 8, 16, 30)
+event6.end_time = datetime.datetime(2013, 10, 8, 16, 30)
 
+event7 = Event()
+event7.name = "Kaffee Klatsch"
+event7.location = "German Department Library, Dwinelle Hall"
+event7.sponsor = "German Department"
+event7.latitude = 37.8707856 
+event7.longitude = -122.2605146
+event7.description = "Come speak German and enjoy coffee and treats at the German Coffee Hour"
+event7.food = "Coffee and Refreshments"
+event7.start_time = datetime.datetime(2013, 10, 2, 11, 30)
+event7.end_time = datetime.datetime(2013, 10, 2, 12, 30)
 
+event_list = [event1, event2, event3, event4, event5, event6, event7]
