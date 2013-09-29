@@ -32,19 +32,19 @@
 		      		Location: {{event.location}}<br>
 		      		Date: {{event.start_time}} - {{event.end_time}}
 		      	</button>
-			      <div class="google" id="map1"></div>
+			      <div class="google" id="{{event.name}}"></div>
 			      <script>
 				      function initialize() {
-				        var map_canvas = document.getElementById('map1');
+				        var map_canvas = document.getElementById('{{event.name}}');
 				        var map_options = {
-				          center: new google.maps.LatLng(44.5403, -78.5463),
+				          center: new google.maps.LatLng({{event.latitude}}, {{event.longitude}}),
 				          zoom: 8,
 				          mapTypeId: google.maps.MapTypeId.ROADMAP
 				        }
 				        var map = new google.maps.Map(map_canvas, map_options)
 
 				         var marker = new google.maps.Marker({
-						        position: new google.maps.LatLng(44.5403, -78.5463),
+						        position: new google.maps.LatLng({{event.latitude}}, {{event.longitude}}),
 						        map: map
 						    });
 				      }
