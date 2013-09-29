@@ -30,10 +30,6 @@ body {
 	width: 300px;
 }
 
-.food_pics {
-	height: 150px;
-	width: 150px;
-}
 .cal-background {
 	position: absolute;
 	top: 50px;
@@ -42,4 +38,9 @@ body {
 #cal_image {
 	height: 425px;
 	width: 100%;
+}
+
+.food_pics {
+	height: 100px;
+	width: 100px;
 }
